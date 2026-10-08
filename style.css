@@ -1,0 +1,270 @@
+/* Centering content vertically and horizontally on the full screen */
+body {
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background-color: #1a1a2e; /* Dark magical background */
+  color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* MAIN CARD CONTAINER */
+#start-screen, #question-screen, #result-screen {
+  background-color: #16213e;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  width: 90%;
+  border: 2px solid #e94560;
+}
+
+/* Helper class to hide elements */
+.hidden {
+  display: none;
+}
+
+/* Styling the title */
+#app-title {
+  color: #e94560;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* Styling the question text */
+#question-number {
+  color: #00fff5;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+#question-text {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+/* Container for answer choice buttons */
+#choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Styling the buttons */
+#start-btn, .choice-btn, #restart-btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: #0f3460;
+  color: #ffffff;
+  border: 2px solid #e94560;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#start-btn:hover, .choice-btn:hover, #restart-btn:hover {
+  background-color: #e94560;
+  color: #ffffff;
+  transform: scale(1.02);
+}
+
+/* HOUSE SPECIFIC COLOR THEMES FOR RESULT SCREEN */
+.house-Gryffindor {
+  background-color: #740001 !important;
+  border-color: #e3a000 !important;
+  color: #ffd700;
+}
+
+.house-Ravenclaw {
+  background-color: #0e1a40 !important;
+  border-color: #946b2d !important;
+  color: #946b2d;
+}
+
+.house-Hufflepuff {
+  background-color: #ecb939 !important;
+  border-color: #000000 !important;
+  color: #000000;
+}
+
+.house-Slytherin {
+  background-color: #1a472a !important;
+  border-color: #aaaaaa !important;
+  color: #aaaaaa;
+}
+/* TOP BAR */
+#top-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#help-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #0f3460;
+  color: #00fff5;
+  border: 2px solid #00fff5;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#help-btn:hover {
+  transform: scale(1.1);
+  background-color: #00fff5;
+  color: #0f3460;
+}
+
+/* MODAL OVERLAY */
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#modal-content {
+  background-color: #16213e;
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #00fff5;
+  max-width: 400px;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+#modal-content h2 {
+  color: #00fff5;
+  margin-top: 0;
+}
+
+#modal-content p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+#close-modal-btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 10px 20px;
+  background-color: #e94560;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hidden {
+  display: none !important;
+}
+/* FEEDBACK BUTTON */
+#feedback-btn {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background-color: #0f3460;
+  color: #00fff5;
+  border: 2px solid #00fff5;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+#feedback-btn:hover {
+  transform: scale(1.05);
+  background-color: #00fff5;
+  color: #0f3460;
+}
+
+/* FEEDBACK MODAL STYLING */
+#feedback-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#feedback-modal-content {
+  background-color: #16213e;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #e94560;
+  max-width: 400px;
+  width: 90%;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+#feedback-modal-content h2 {
+  color: #e94560;
+  margin-top: 0;
+}
+
+#feedback-input {
+  width: 100%;
+  height: 90px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #00fff5;
+  background-color: #0f3460;
+  color: #ffffff;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  resize: none;
+}
+
+#feedback-actions {
+  display: flex;
+  gap: 10px;
+}
+
+#submit-feedback-btn {
+  padding: 8px 16px;
+  background-color: #e94560;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#close-feedback-btn {
+  padding: 8px 16px;
+  background-color: #34495e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#feedback-confirmation {
+  color: #00fff5;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}

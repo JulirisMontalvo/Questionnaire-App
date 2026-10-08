@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which Harry Potter House Are You In?</title>
+  <!-- LINK TO CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP NAVIGATION BAR -->
+  <div id="top-bar">
+    <button id="feedback-btn">Feedback</button>
+    <button id="help-btn" title="How to Play">?</button>
+  </div>
+
+  <!-- SCREEN 1: START SCREEN -->
+  <div id="start-screen">
+    <h1 id="app-title">Which Harry Potter House Are You In?</h1>
+    <button id="start-btn">Start Questionnaire</button>
+  </div>
+
+  <!-- SCREEN 2: QUESTION SCREEN -->
+  <div id="question-screen" class="hidden">
+    <p id="question-number">Question 1 of 10</p>
+    <h2 id="question-text">Question text will go here...</h2>
+    <div id="choices-container"></div>
+  </div>
+
+  <!-- SCREEN 3: RESULT SCREEN -->
+  <div id="result-screen" class="hidden">
+    <h2>Your Sorting Hat Result:</h2>
+    <h1 id="house-result">House Name</h1>
+    <p id="house-description">Description will appear here...</p>
+    <button id="restart-btn">Take Questionnaire Again</button>
+  </div>
+
+  <!-- INSTRUCTIONS MODAL POP-UP -->
+  <div id="modal-overlay" class="hidden">
+    <div id="modal-content">
+      <h2>How the Sorting Hat Works</h2>
+      <p>1. Read each of the 10 magical questions carefully.</p>
+      <p>2. Choose the answer that best reflects your true personality.</p>
+      <p>3. Each choice gives points to one of the four Hogwarts houses: Gryffindor, Ravenclaw, Hufflepuff, or Slytherin.</p>
+      <p>4. At the end, the Sorting Hat reveals your official house!</p>
+      <button id="close-modal-btn">Got it!</button>
+    </div>
+  </div>
+<!-- FEEDBACK MODAL POP-UP -->
+  <div id="feedback-modal-overlay" class="hidden">
+    <div id="feedback-modal-content">
+      <h2>Send Feedback</h2>
+      <p>Have ideas to make the Sorting Hat quiz better?</p>
+      
+      <label for="feedback-input">Your Feedback:</label>
+      <textarea id="feedback-input" placeholder="Type your message here..."></textarea>
+      
+      <div id="feedback-actions">
+        <button id="submit-feedback-btn">Send</button>
+        <button id="close-feedback-btn">Cancel</button>
+      </div>
+      
+      <p id="feedback-confirmation" class="hidden">Thank you for your feedback! 🪄</p>
+    </div>
+  </div>
+  
+  <!-- LINK TO JAVASCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
+ 
